@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>196040</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="js/bootstrap.bundle.js">
+    <link href="js/bootstrap.js">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c2096e540b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+<div class="container .background-color">
+    <div class="container shadow min-vh-100 py-5 px-5 .background-color">
+        <div class="header text-center p-4">
+            <h1 class="h1 px-5 mb-5 text-white">
+               Weekly Statistics
+            </h1>
+            <h3 class="mt-5"> These are your weekly statistics. <br> Analyze their behavior to do better the following week! </h3>
+        </div>
+       <!-- <div class="container shadow w-50 py-2 px-2 h-100 align-content-center">
+            <div class="row justify-content-center mt-3 mb-3">
+                <h5 class="fst-italic text-center"> Want to enter data for another day? </h5>
+                <button class="btn btn-light btn-outline-primary rounded-4 w-75 mt-2 p-3"><a href="index.html" class="text-decoration-none text-black"> Go back to input information for another day</a></button>
+            </div>
+        </div>
+        -->
+        <div class="container shadow w-50 py-2 px-2 h-100 align-content-center">
+        <div class="row justify-content-center mt-3 mb-3 justify-content-center">
+            <div id="activitychart" class="mb-3 ms-4"></div>
+            <div id="physicalsymptomchart" class="mb-3 ms-4"></div>
+            <div id="mentalsymptomchart" class="mb-3 ms-4"></div>
+            <button class="btn btn-light btn-outline-primary rounded-4 w-75 mt-5 p-3"><a href="index.html" class="text-decoration-none text-black"> Go back to input information for another day</a></button>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChartActivity);
+    google.charts.setOnLoadCallback(drawChartPhysicalSymptom);
+    google.charts.setOnLoadCallback(drawChartMentalSymptom);
+
+
+    // Draw the chart and set the chart values
+    function drawChartActivity() {
+        var data = google.visualization.arrayToDataTable([
+            ['Activity', 'Times per Week'],
+            ['Work', 6],
+            ['Quality time with friends', 2],
+            ['Workout', 2],
+            ['Watching TV', 5],
+            ['Gym', 2],
+            ['Meditation', 3]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {'title':'Your Average Daily Activities', 'width':550, 'height':400};
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('activitychart'));
+        chart.draw(data, options);
+    }
+    function drawChartPhysicalSymptom() {
+        var data = google.visualization.arrayToDataTable([
+            ['Physical Symptom', 'Times per Week'],
+            ['Fatigue', 7],
+            ['Headache', 6],
+            ['High body temperature', 1],
+            ['Chest pain', 2]
+        ]);
+
+        var options = {'title':'Your Average Daily Physical Symptoms', 'width':550, 'height':400};
+
+        var chart = new google.visualization.PieChart(document.getElementById('physicalsymptomchart'));
+        chart.draw(data, options);
+    }
+    function drawChartMentalSymptom() {
+        var data = google.visualization.arrayToDataTable([
+            ['Mental Symptom', 'Times per Week'],
+            ['Depression', 6],
+            ['Frustrated', 2],
+            ['Energetic', 3],
+            ['Moody', 5],
+            ['Happy', 1]
+        ]);
+
+        var options = {'title':'Your Average Daily Mental Symptoms', 'width':550, 'height':400};
+
+        var chart = new google.visualization.PieChart(document.getElementById('mentalsymptomchart'));
+        chart.draw(data, options);
+    }
+</script>
+</body>
+</html>
