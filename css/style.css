@@ -1,0 +1,78 @@
+.input-group-append {
+    cursor: pointer;
+}
+.background-color {
+    background: linear-gradient(180deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+}
+.container {
+    background: linear-gradient(180deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+}
+.vh-50 {
+    height: 50vh;
+}
+.vw-50 {
+    width: 50vw;
+}.bootstrap-datetimepicker-widget.dropdown-menu {
+     background-color: #30363b;
+     border-color: #2b3135;
+     width: 100%;
+ }
+.datepicker {
+      background-color: #fff !important;
+      border-radius: 0 !important;
+      align-content: center !important;
+      padding: 0 !important
+  }
+
+.datepicker-dropdown {
+    top: 180px !important;
+    left: calc(50% - 173.5px) !important;
+    border-right: #1976D2 !important;
+    border-left: #1976D2 !important;
+}
+
+.datepicker-dropdown.datepicker-orient-left:before {
+    left: calc(50% - 6px) !important;
+}
+
+.datepicker-dropdown.datepicker-orient-left:after {
+    left: calc(50% - 5px) !important;
+    border-bottom-color: #1976D2
+}
+
+.datepicker-dropdown.datepicker-orient-right:after {
+    border-bottom-color: #1976D2
+}
+
+.datepicker table tr td.today,
+span.focused {
+    border-radius: 50% !important;
+    background-image: linear-gradient(#FFF3E0, #FFE0B2)
+}
+
+thead tr:nth-child(2) {
+    background-color: #1976D2 !important
+}
+
+thead tr:nth-child(3) th {
+    font-weight: bold !important;
+    padding: 20px 10px !important;
+    color: #BDBDBD !important
+}
+
+tbody tr td {
+    padding: 10px !important
+}
+
+tfoot tr:nth-child(2) th {
+    padding: 10px !important;
+    border-top: 1px solid #CFD8DC !important
+}
+a:hover .onhoverwhite {
+    color: white;
+}
+.chart-container {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
